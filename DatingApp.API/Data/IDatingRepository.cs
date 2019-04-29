@@ -11,5 +11,7 @@ namespace MyProjects_V2.Git.DatingApp.DatingApp.API.Data
         Task<bool> SaveAll();
         Task<IEnumerable<User>> GetUsers();
         Task<User> GetUser(int id);
+        Task<Photo> GetPhoto(int id);
+        Task<Photo> GetMainPhotoForUserAsync(int userId);
     }
 }
