@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MyProjects_V2.Git.DatingApp.DatingApp.API.Data;
 using MyProjects_V2.Git.DatingApp.DatingApp.API.Dtos;
+using MyProjects_V2.Git.DatingApp.DatingApp.API.Helpers;
 
 namespace MyProjects_V2.Git.DatingApp.DatingApp.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
