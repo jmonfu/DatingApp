@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using MyProjects_V2.Git.DatingApp.DatingApp.API.Helpers;
 using MyProjects_V2.Git.DatingApp.DatingApp.API.Models;
 
 namespace MyProjects_V2.Git.DatingApp.DatingApp.API.Data
@@ -9,7 +10,7 @@ namespace MyProjects_V2.Git.DatingApp.DatingApp.API.Data
         void Add<T>(T entity) where T: class;
         void Delete<T>(T entity) where T : class;
         Task<bool> SaveAll();
-        Task<IEnumerable<User>> GetUsers();
+        Task<PagedList<User>> GetUsers(UserParams userParams);
         Task<User> GetUser(int id);
         Task<Photo> GetPhoto(int id);
         Task<Photo> GetMainPhotoForUserAsync(int userId);
